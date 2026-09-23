@@ -26,7 +26,7 @@ app.get('/subtract', (req, res) => {
     return res.status(400).json({ error: 'a y b deben ser numeros' });
   }
 
-  return res.json({ result: a - b });
+  return res.json({ result: subtract(a, b) });
 });
 
 if (require.main === module) {
